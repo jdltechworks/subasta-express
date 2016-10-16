@@ -1,1 +1,1 @@
-node-babel index.js
+web: npm start
