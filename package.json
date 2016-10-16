@@ -4,7 +4,7 @@
   "description": "Express based subasta",
   "main": "index.js",
   "scripts": {
-    "start": "babel-node index.js",
+    "start": "./node_modules/.bin/babel-node index.js",
     "build": "rimraf dist && cross-env NODE_ENV=production webpack --config ./webpack.production.config.js --progress --profile --colors",
     "server": "nodemon --watch server --exec babel-node -- index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
