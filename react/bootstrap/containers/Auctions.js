@@ -62,7 +62,7 @@ export default class Auctions extends Component {
         <div className="col-md-4">
           <div className="panel panel-default">
             <div className="panel-heading">
-              <h4>Sponsors</h4>
+              <h4>Sponsored</h4>
             </div>
             <div className="panel-body">
             <div className="media">
@@ -84,7 +84,7 @@ export default class Auctions extends Component {
                 </a>
               </div>
               <div className="media-body">
-                <h4 className="media-heading">Media heading</h4>
+                <h4 className="media-heading">Racoons</h4>
                 <p>Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.</p>
                 <p>Php 500.00</p>
               </div>
