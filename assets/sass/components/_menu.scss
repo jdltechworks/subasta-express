@@ -1,0 +1,39 @@
+$main-menu-width: 420px;
+
+.main-menu {
+  position: fixed;
+  width: $main-menu-width;
+  height: 100%;
+  .main-menu-inner {
+    position: relative;
+    height: 100%;
+    .copy-right {
+      position: absolute;
+      bottom: 6.5%;
+      width: 100%;
+      p {
+        margin: 0;
+      }
+    }
+  }
+}
+body {
+  .wrapper {
+    transform: translate3d(0, 0, 0);
+    transition: 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
+  }
+  .main-menu {
+    transition: 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
+    transform: translate3d(-100%, 0, 0);
+  }
+}
+
+.menu-open{
+  .main-menu {
+    left: 0;
+    transform: translate3d(0, 0, 0);
+  }
+  .wrapper {
+    transform: translate3d($main-menu-width, 0, 0);
+  }
+}

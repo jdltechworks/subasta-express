@@ -1,0 +1,15 @@
+#dropzone {
+	border: 1px solid #666;
+	padding: 5em;
+}
+
+.page {
+  &-inner {
+    position: relative;
+    padding-top: 50px;
+  }
+}
+
+.wrapper {
+  margin-top: 1em;
+}
