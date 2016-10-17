@@ -1,19 +1,19 @@
-import eq from 'lodash/eq';
-import isNull from 'lodash/isNull';
-import path from 'path';
-import express from 'express';
-import webpack from 'webpack';
-import webpackMiddleware from 'webpack-dev-middleware';
-import webpackHotMiddleware from 'webpack-hot-middleware';
-import config from './webpack.config.js';
+var eq = require('lodash/eq');
+var isNull = require('lodash/isNull');
+var path = require('path');
+var express = require('express');
+var webpack = require('webpack');
+var webpackMiddleware = require('webpack-dev-middleware');
+var webpackHotMiddleware = require('webpack-hot-middleware');
+var config = require('./webpack.config.js');
 
-const isDeveloping = process.env.NODE_ENV !== 'production';
-const port = isDeveloping ? 3000 : process.env.PORT;
-const app = express();
+var isDeveloping = process.env.NODE_ENV !== 'production';
+var port = isDeveloping ? 3000 : process.env.PORT;
+var app = express();
 
 if (isDeveloping) {
-  const compiler = webpack(config);
-  const middleware = webpackMiddleware(compiler, {
+  var compiler = webpack(config);
+  var middleware = webpackMiddleware(compiler, {
     publicPath: config.output.publicPath,
     contentBase: 'src',
     stats: {
@@ -24,7 +24,9 @@ if (isDeveloping) {
       chunkModules: false,
       modules: false
     },
-    hot: true
+    hot: true,
+    noInfo: true,
+    silent: true
   });
   app.use(middleware);
   app.use(webpackHotMiddleware(compiler));  

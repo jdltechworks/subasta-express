@@ -37,7 +37,7 @@ export default class Auctions extends Component {
       collection.map((auction, key) => (
       <div key={key} className="panel panel-default">
         <div className="panel-heading">
-          <a href="#"><strong>siron corp</strong></a><span> added </span><a href="#"><strong>Bakal</strong></a>
+          <a href="#"><strong>JTECH Industy</strong></a><span> added </span><a href="#"><strong>Bakal</strong></a>
           </div>
           <div className="panel-body">
           <h4>{auction.name}</h4>
